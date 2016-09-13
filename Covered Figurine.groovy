@@ -77,7 +77,20 @@ CSG torso = new Cylinder(	30, // Radius at the bottom
 				.movex(31)
 				.movey(39)
 				.movez(60)
-CSG eyes = eye1.union(eye2).union(eye3).union(eye4).union(eye5); 
+//top eye
+  CSG topEye = new Sphere(2)// Spheres radius
+				.toCSG()
+				.movex(34)
+				.movey(34)
+				.movez(65)
+//bottom eye
+  CSG bottomEye = new Sphere(2)// Spheres radius
+				.toCSG()
+				.movex(36)
+				.movey(36)
+				.movez(55)
+CSG eyes = eye1.union(eye2).union(eye3).union(eye4).union(eye5).union(topEye).union(bottomEye); 
+eyes.setColor(javafx.scene.paint.Color.CYAN);
 //shoulder for one of the arms
 CSG shoulder1 = new Cylinder(	12, // Radius at the bottom
                        		0, // Radius at the top
@@ -85,7 +98,6 @@ CSG shoulder1 = new Cylinder(	12, // Radius at the bottom
                        		(int)4 //resolution
                        		).toCSG()//convert to CSG to display                    			 
 shoulder1 = shoulder1 .rotz(50).roty(45).rotx(40).movey(31).movez(65).movex(19)
-
 //shoulder for the other arm
 CSG shoulder2 = new Cylinder(	12, // Radius at the bottom
                        		0, // Radius at the top
@@ -93,7 +105,7 @@ CSG shoulder2 = new Cylinder(	12, // Radius at the bottom
                        		(int)4 //resolution
                        		).toCSG()//convert to CSG to display                    			 
 shoulder2 = shoulder2 .rotz(-50).rotx(-40).roty(-45).movey(19).movez(65).movex(31)
-
+CSG body = torso.union(legs).union(shoulder1).union(shoulder2)
 //CSG bottleMouth = new Cube
-  return [legs, eyes,torso,shoulder1, shoulder2] 
+  return [body,eyes] 
 //y-35).rotx(-55).
