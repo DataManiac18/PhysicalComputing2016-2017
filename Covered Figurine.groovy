@@ -90,7 +90,7 @@ CSG torso = new Cylinder(	30, // Radius at the bottom
 				.movey(36)
 				.movez(55)
 CSG eyes = eye1.union(eye2).union(eye3).union(eye4).union(eye5).union(topEye).union(bottomEye); 
-eyes.setColor(javafx.scene.paint.Color.CYAN);
+eyes.setColor(javafx.scene.paint.Color.YELLOW);
 //shoulder for one of the arms
 CSG shoulder1 = new Cylinder(	12, // Radius at the bottom
                        		0, // Radius at the top
@@ -106,6 +106,7 @@ CSG shoulder2 = new Cylinder(	12, // Radius at the bottom
                        		).toCSG()//convert to CSG to display                    			 
 shoulder2 = shoulder2 .rotz(-50).rotx(-40).roty(-45).movey(19).movez(65).movex(31)
 CSG body = torso.union(legs).union(shoulder1).union(shoulder2)
-//CSG bottleMouth = new Cube
-  return [body,eyes] 
-//y-35).rotx(-55).
+body.setColor(javafx.scene.paint.Color.CYAN);
+return [body,eyes] 
+//y-35).rotx(-55).//use this for indented eyes: CSG finalBody = body.difference(eyes);
+//add new aspect, bottle opener in back CSG bottleBack = new Cube
