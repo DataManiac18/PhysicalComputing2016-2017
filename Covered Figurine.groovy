@@ -45,27 +45,46 @@ CSG torso = new Cylinder(	30, // Radius at the bottom
  // perform leg unions
  CSG legAndFoot1 = leg1.union(foot1); 
  CSG legAndFoot2 = leg2.union(foot2); 
+ CSG legs = legAndFoot1.union(legAndFoot2);
 
  //eye 1
- CSG eye1 = new Sphere(3)// Spheres radius
+ CSG eye1 = new Sphere(2)// Spheres radius
 				.toCSG()
-				.movex(30)
-				.movey(35)
-				.movez(70)
+				.movex(27)
+				.movey(43)
+				.movez(60)
 //eye 2
-  CSG eye2 = new Sphere(3)// Spheres radius
+  CSG eye2 = new Sphere(2)// Spheres radius
+				.toCSG()
+				.movex(43)
+				.movey(27)
+				.movez(60)
+//eye 3
+  CSG eye3 = new Sphere(2)// Spheres radius
+				.toCSG()
+				.movex(39)
+				.movey(31)
+				.movez(60)
+//eye 4
+  CSG eye4 = new Sphere(2)// Spheres radius
 				.toCSG()
 				.movex(35)
-				.movey(30)
-				.movez(70)
-				
+				.movey(35)
+				.movez(60)
+//eye 5
+  CSG eye5 = new Sphere(2)// Spheres radius
+				.toCSG()
+				.movex(31)
+				.movey(39)
+				.movez(60)
+CSG eyes = eye1.union(eye2).union(eye3).union(eye4).union(eye5); 
 //shoulder for one of the arms
 CSG shoulder1 = new Cylinder(	12, // Radius at the bottom
                        		0, // Radius at the top
                        		30, // Height
                        		(int)4 //resolution
                        		).toCSG()//convert to CSG to display                    			 
-shoulder1 = shoulder1 .roty(35).rotx(55).movey(31).movez(65).movex(17)
+shoulder1 = shoulder1 .rotz(50).roty(45).rotx(40).movey(31).movez(65).movex(19)
 
 //shoulder for the other arm
 CSG shoulder2 = new Cylinder(	12, // Radius at the bottom
@@ -73,6 +92,8 @@ CSG shoulder2 = new Cylinder(	12, // Radius at the bottom
                        		30, // Height
                        		(int)4 //resolution
                        		).toCSG()//convert to CSG to display                    			 
-shoulder2 = shoulder2 .roty(-35).rotx(-55).movey(19).movez(65).movex(33)
-  return [legAndFoot1,legAndFoot2 ,torso, eye1,eye2,shoulder1, shoulder2] 
- //Your code here 
+shoulder2 = shoulder2 .rotz(-50).rotx(-40).roty(-45).movey(19).movez(65).movex(31)
+
+//CSG bottleMouth = new Cube
+  return [legs, eyes,torso,shoulder1, shoulder2] 
+//y-35).rotx(-55).
