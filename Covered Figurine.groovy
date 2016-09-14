@@ -111,16 +111,14 @@ eyes=eyes.rotz(-45).movex(33).movey(-13.5);
 
 CSG cover = new Cube(	77,// X dimention
 					54,// Y dimention
-				100//  Z dimention
+					100//  Z dimention
 					).toCSG()
-//CSG cover = new Cube(20, 40, 50).toCSG()
 cover = cover.movez(50).movey(27).movex(33.5);
 CSG fullBody = body.union(eyes);
-cover = cover.difference(body);
-//cover = cover.difference(eyes);
+cover = cover.difference(fullBody);
 //eyes = eyes.movex(83);
 body = body.movex(83);
-//cover = cover.union(body);
+
 CSG i1 = new Cube(	77,// X dimention
 					54,// Y dimention
 					100//  Z dimention
@@ -169,9 +167,3 @@ eyes=eyes.setColor(javafx.scene.paint.Color.YELLOW);
 body.setColor(javafx.scene.paint.Color.CYAN);
 //return [body,eyes,cover] 
 return [cover,body]
-//add new aspect, bottle opener in back CSG bottleBack = new Cube
-
-//CSG measureWall = new Cube(	100,// X dimention
-//					100,// Y dimention
-//					1//  Z dimention
-//	//				).toCSG()movez(95)
