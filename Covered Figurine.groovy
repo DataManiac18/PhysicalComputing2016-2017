@@ -106,13 +106,21 @@ CSG shoulder2 = new Cylinder(	12, // Radius at the bottom
                        		).toCSG()//convert to CSG to display                    			 
 shoulder2 = shoulder2 .rotz(-50).rotx(-40).roty(-45).movey(19).movez(60).movex(31)
 CSG body = torso.union(legs).union(shoulder1).union(shoulder2)
-
-
+body=body.rotz(-45).movex(33).movey(-8.5);
+eyes=eyes.rotz(-45).movex(33).movey(-13.5);
 
 CSG cover = new Cube(	77,// X dimention
 					54,// Y dimention
-					100//  Z dimention
-					).toCSG().movex(110).movez(50).movey(27);
+				100//  Z dimention
+					).toCSG()
+//CSG cover = new Cube(20, 40, 50).toCSG()
+cover = cover.movez(50).movey(27).movex(33.5);
+CSG fullBody = body.union(eyes);
+cover = cover.difference(body);
+//cover = cover.difference(eyes);
+//eyes = eyes.movex(83);
+body = body.movex(83);
+//cover = cover.union(body);
 CSG i1 = new Cube(	77,// X dimention
 					54,// Y dimention
 					100//  Z dimention
@@ -155,15 +163,15 @@ CSG e4 = new Cube(	77,// X dimention
 					).toCSG().movex(110).movez(50).movey(27);
 CSG letters = i1.union(i2).union(i3).union(c1).union(c2).union(c3).union(e1).union(e2).union(e3).union(e4);
 
-body=body.rotz(-45).movex(33).movey(-13.5);
-eyes=eyes.rotz(-45).movex(33).movey(-13.5);
+
+
 eyes=eyes.setColor(javafx.scene.paint.Color.YELLOW);
 body.setColor(javafx.scene.paint.Color.CYAN);
-return [body,eyes,cover] 
-
+//return [body,eyes,cover] 
+return [cover,body]
 //add new aspect, bottle opener in back CSG bottleBack = new Cube
 
 //CSG measureWall = new Cube(	100,// X dimention
 //					100,// Y dimention
 //					1//  Z dimention
-//					).toCSG()movez(95)
+//	//				).toCSG()movez(95)
