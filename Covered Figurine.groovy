@@ -90,7 +90,7 @@ CSG torso = new Cylinder(	30, // Radius at the bottom
 				.movey(36)
 				.movez(50)
 CSG eyes = eye1.union(eye2).union(eye3).union(eye4).union(eye5).union(topEye).union(bottomEye); 
-eyes=eyes.setColor(javafx.scene.paint.Color.YELLOW);
+
 //shoulder for one of the arms
 CSG shoulder1 = new Cylinder(	12, // Radius at the bottom
                        		0, // Radius at the top
@@ -105,16 +105,62 @@ CSG shoulder2 = new Cylinder(	12, // Radius at the bottom
                        		(int)4 //resolution
                        		).toCSG()//convert to CSG to display                    			 
 shoulder2 = shoulder2 .rotz(-50).rotx(-40).roty(-45).movey(19).movez(60).movex(31)
-CSG body = torso.union(legs).union(shoulder1).union(shoulder2).union(eyes)
+CSG body = torso.union(legs).union(shoulder1).union(shoulder2)
 
-CSG cover = new Cube(	100,// X dimention
-					40,// Y dimention
+
+
+CSG cover = new Cube(	77,// X dimention
+					54,// Y dimention
 					100//  Z dimention
-					).toCSG()
-body.setColor(javafx.scene.paint.Color.CYAN);
+					).toCSG().movex(110).movez(50).movey(27);
+CSG i1 = new Cube(	77,// X dimention
+					54,// Y dimention
+					100//  Z dimention
+					).toCSG().movex(110).movez(50).movey(27);
+CSG i2 = new Cube(	77,// X dimention
+					54,// Y dimention
+					100//  Z dimention
+					).toCSG().movex(110).movez(50).movey(27);
+CSG i3 = new Cube(	77,// X dimention
+					54,// Y dimention
+					100//  Z dimention
+					).toCSG().movex(110).movez(50).movey(27);
+CSG c1 = new Cube(	77,// X dimention
+					54,// Y dimention
+					100//  Z dimention
+					).toCSG().movex(110).movez(50).movey(27);
+CSG c2 = new Cube(	77,// X dimention
+					54,// Y dimention
+					100//  Z dimention
+					).toCSG().movex(110).movez(50).movey(27);
+CSG c3 = new Cube(	77,// X dimention
+					54,// Y dimention
+					100//  Z dimention
+					).toCSG().movex(110).movez(50).movey(27);
+CSG e1 = new Cube(	77,// X dimention
+					54,// Y dimention
+					100//  Z dimention
+					).toCSG().movex(110).movez(50).movey(27);
+CSG e2 = new Cube(	77,// X dimention
+					54,// Y dimention
+					100//  Z dimention
+					).toCSG().movex(110).movez(50).movey(27);
+CSG e3 = new Cube(	77,// X dimention
+					54,// Y dimention
+					100//  Z dimention
+					).toCSG().movex(110).movez(50).movey(27);										
+CSG e4 = new Cube(	77,// X dimention
+					54,// Y dimention
+					100//  Z dimention
+					).toCSG().movex(110).movez(50).movey(27);
+CSG letters = i1.union(i2).union(i3).union(c1).union(c2).union(c3).union(e1).union(e2).union(e3).union(e4);
+
 body=body.rotz(-45).movex(33).movey(-13.5);
-return [body,measureWall]//,eyes] 
-//y-35).rotx(-55).//use this for indented eyes: CSG finalBody = body.difference(eyes);
+eyes=eyes.rotz(-45).movex(33).movey(-13.5);
+eyes=eyes.setColor(javafx.scene.paint.Color.YELLOW);
+body.setColor(javafx.scene.paint.Color.CYAN);
+return [body,eyes,cover] 
+
 //add new aspect, bottle opener in back CSG bottleBack = new Cube
 
 //CSG measureWall = new Cube(	100,// X dimention
