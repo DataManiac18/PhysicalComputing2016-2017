@@ -88,6 +88,7 @@ CSG torso = new Cylinder(	30, // Radius at the bottom
 				.movex(36)
 				.movey(36)
 				.movez(50)
+				
 CSG eyes = eye1.union(eye2)
 			.union(eye3)
 			.union(eye4)
@@ -108,7 +109,8 @@ eyes=eyes.rotz(-45)
 
 //bodyPlusEyes swill be subtracted from cover to make a cover
 CSG newEyes = eyes.hull();
-CSG bodyPlusEyes = body.union(newEyes).movex(5);
+CSG bodyPlusEyes = body.union(newEyes)
+				   .movex(5);
 
 CSG cover = new Cube(	77,// X dimention
 					54,// Y dimention
@@ -116,12 +118,18 @@ CSG cover = new Cube(	77,// X dimention
 					).toCSG()
 
 //subtracts bodyPusEyes from cover
-cover = cover.movez(50).movey(27).movex(38.5);
+cover = cover.movez(50)
+		   .movey(27)
+		   .movex(38.5);
 cover = cover.difference(bodyPlusEyes);
 body = body.movex(83);
 
 //cube to be subtracted from bottom of cover to allow regice entry
-CSG bottomCube= new Cube(43.2,43.2,35).toCSG().movex(21.6+16.4).movez(17.5).movey(21.6+5.4);
+CSG bottomCube= new Cube(43.2,43.2,35)
+					.toCSG()
+					.movex(21.6+16.4)
+					.movez(17.5)
+					.movey(21.6+5.4);
 cover = cover.difference(bottomCube);
 
 eyes=eyes.movex(83);
@@ -131,7 +139,7 @@ return[cover,body,eyes]
 
 
 /**
-TO possibly be added later, letters co=arved into cover spelling ICE for regice
+To possibly be added later, letters carved into cover spelling ICE for regice
 
 CSG i1 = new Cube(	77,// X dimention
 					54,// Y dimention
