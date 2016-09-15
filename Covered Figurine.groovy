@@ -88,18 +88,27 @@ CSG torso = new Cylinder(	30, // Radius at the bottom
 				.movex(36)
 				.movey(36)
 				.movez(50)
-CSG eyes = eye1.union(eye2).union(eye3).union(eye4).union(eye5).union(topEye).union(bottomEye); 
+CSG eyes = eye1.union(eye2)
+			.union(eye3)
+			.union(eye4)
+			.union(eye5)
+			.union(topEye)
+			.union(bottomEye); 
 
 //this combines all parts of regice excluding eyes (as they will be different color) into one variable 
 CSG body = torso.union(legs);
 
 //rotates these and likes them up with the axises
-body=body.rotz(-45).movex(33).movey(-8.5);
-eyes=eyes.rotz(-45).movex(33).movey(-8.5);
+body=body.rotz(-45)
+		.movex(33)
+		.movey(-8.5);
+eyes=eyes.rotz(-45)
+		.movex(33)
+		.movey(-8.5);
 
 //bodyPlusEyes swill be subtracted from cover to make a cover
 CSG newEyes = eyes.hull();
-CSG bodyPlusEyes = body.union(newEyes)movex(5);
+CSG bodyPlusEyes = body.union(newEyes).movex(5);
 
 CSG cover = new Cube(	77,// X dimention
 					54,// Y dimention
