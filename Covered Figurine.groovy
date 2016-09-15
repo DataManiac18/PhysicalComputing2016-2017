@@ -1,7 +1,7 @@
 CSG simpleSyntax =new Cylinder(10,10,40,(int)30).toCSG() // a one line Cylinder
 //the torso of triangle man
 CSG torso = new Cylinder(	30, // Radius at the bottom
-                       		0, // Radius at the top
+                       		0.001, // Radius at the top
                        		60, // Height
                        		(int)4 //resolution
                        		).toCSG()//convert to CSG to display                    			 
@@ -110,7 +110,8 @@ eyes=eyes.rotz(-45)
 //bodyPlusEyes swill be subtracted from cover to make a cover
 CSG newEyes = eyes.hull();
 CSG bodyPlusEyes = body.union(newEyes)
-				   .movex(5);
+				   .movex(5)
+				   .hull();
 
 CSG cover = new Cube(	77,// X dimention
 					54,// Y dimention
@@ -125,16 +126,23 @@ cover = cover.difference(bodyPlusEyes);
 body = body.movex(83);
 
 //cube to be subtracted from bottom of cover to allow regice entry
-CSG bottomCube= new Cube(43.2,43.2,35)
+CSG bottomCube= new Cube(43.2,
+					43.2,
+					35)
 					.toCSG()
 					.movex(21.6+16.4)
 					.movez(17.5)
 					.movey(21.6+5.4);
 cover = cover.difference(bottomCube);
+//rotates the cover upside down so that it can be printed without overhang
+cover = cover.rotx(180)
+		   .movez(100)
+		   .movey(54);
 
 eyes=eyes.movex(83);
 body.setColor(javafx.scene.paint.Color.CYAN);
 eyes=eyes.setColor(javafx.scene.paint.Color.YELLOW);
+
 return[cover,body,eyes]
 
 
