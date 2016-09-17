@@ -123,6 +123,7 @@ cover = cover.movez(50)
 		   .movey(27)
 		   .movex(38.5);
 cover = cover.difference(bodyPlusEyes);
+
 body = body.movex(83);
 
 //cube to be subtracted from bottom of cover to allow regice entry
@@ -140,10 +141,11 @@ cover = cover.rotx(180)
 		   .movey(54);
 
 eyes=eyes.movex(83);
+body = body.union(eyes);
 body.setColor(javafx.scene.paint.Color.CYAN);
 eyes=eyes.setColor(javafx.scene.paint.Color.YELLOW);
 
-return[cover,body,eyes]
+return[cover,body]
 
 
 /**
