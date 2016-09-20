@@ -7,16 +7,11 @@
     "jogKiny": "y",
     "jogKinx": "x"
   },
-  "studio-open-git": {
-    "https://github.com/DataManiac18/BowlerStudioConfiguration.git:Covered Figurine.groovy": [
-      "https://github.com/DataManiac18/BowlerStudioConfiguration.git",
-      "Covered Figurine.groovy"
-    ]
-  },
+  "studio-open-git": {},
   "BowlerStudioConfigs": {
     "firstVersion": "0.19.2",
     "skinBranch": "master",
     "skinRepo": "https://github.com/madhephaestus/BowlerStudioImageAssets.git",
-    "currentVersion": "0.19.2"
+    "currentVersion": "0.19.3"
   }
 }
