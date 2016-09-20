@@ -7,7 +7,12 @@
     "jogKiny": "y",
     "jogKinx": "x"
   },
-  "studio-open-git": {},
+  "studio-open-git": {
+    "https://github.com/DataManiac18/BowlerStudioConfiguration.git:printTheServoData.groovy": [
+      "https://github.com/DataManiac18/BowlerStudioConfiguration.git",
+      "printTheServoData.groovy"
+    ]
+  },
   "BowlerStudioConfigs": {
     "firstVersion": "0.19.2",
     "skinBranch": "master",
