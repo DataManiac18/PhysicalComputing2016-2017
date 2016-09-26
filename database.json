@@ -8,13 +8,9 @@
     "jogKinx": "x"
   },
   "studio-open-git": {
-    "https://github.com/DataManiac18/BowlerStudioConfiguration.git:Covered Figurine.groovy": [
+    "https://github.com/DataManiac18/BowlerStudioConfiguration.git:ThreePieceConnections.groovy": [
       "https://github.com/DataManiac18/BowlerStudioConfiguration.git",
-      "Covered Figurine.groovy"
-    ],
-    "https://github.com/DataManiac18/BowlerStudioConfiguration.git:printTheServoData.groovy": [
-      "https://github.com/DataManiac18/BowlerStudioConfiguration.git",
-      "printTheServoData.groovy"
+      "ThreePieceConnections.groovy"
     ]
   },
   "BowlerStudioConfigs": {

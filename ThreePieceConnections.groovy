@@ -22,7 +22,7 @@ CSG pieceTo = new Cube(	xWidth,
 
 CSG pieceTwo = new Cylinder(xWidth/2, 
                        	 	yWidth/2, 
-                       	 	thickness.getMM(),
+                       	 	thickness.getMM()/2,
                        	 	(int)50
                      	 	).toCSG()
 
