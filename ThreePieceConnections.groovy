@@ -22,23 +22,34 @@ CSG pieceTwo = new Cube(yWidth,
                        	 	thickness.getMM(), 
                        	 	xWidth
                      	 	).toCSG()
-
+CSG leg = new Cylinder(4, 
+                       	2, 
+                       	xWidth+thickness.getMM(),
+                       	(int)20
+                     	).toCSG()
+                     	 .movex(5)
+                     	 .movey(5)
+pieceOne = pieceOne.difference(leg.movez(-xWidth))
 pieceTwo = pieceTwo.difference(pieceOne.movex(-3.6*xWidth/4))
 pieceOne = pieceOne.difference(pieceTwo.movex(-3*xWidth/4))
 pieceThree = pieceThree.difference(pieceOne.movey(-3.6*yWidth/4))
 pieceOne = pieceOne.difference(pieceThree.movey(-3*yWidth/4))
-pieceTwo = pieceTwo.movex(-xWidth)
+pieceTwo = pieceTwo .toXMin()
 				.toZMin()
-				.toXMin()
+				.movex(10+thickness.getMM())
 pieceOne = pieceOne .movex(xWidth/2)
-                    .movey(yWidth/2+20)
+                    .movey(yWidth/2+40)
                     .toZMin()
 pieceThree = pieceThree .movex(-xWidth)
 				.toZMin()
 				.toXMin()
 				.movey(15)
-				
-def listOfParts = [pieceOne, pieceTwo, pieceThree]
+leg = leg.movex(50)
+	    .movey(30)
+
+
+                     	
+def listOfParts = [pieceOne,leg, pieceThree, pieceTwo]
 for(int i = 0; i <listOfParts.size();i++){
 	int local = i;
 	listOfParts.get(local)
