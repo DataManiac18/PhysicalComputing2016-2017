@@ -12,31 +12,33 @@ CSG pieceOne = new Cylinder(	xWidth/2+1,
                        	(int)50
                      	).toCSG()
                      	
-
-
-CSG pieceTo = new Cube(	xWidth, 
-                       	thickness.getMM(), 
-                       	yWidth
+CSG pieceThree = new Cube(	thickness.getMM(), 
+                       	yWidth, 
+                       	xWidth
                      	).toCSG()
 
 
-CSG pieceTwo = new Cylinder(xWidth/2, 
-                       	 	yWidth/2, 
-                       	 	thickness.getMM()/2,
-                       	 	(int)50
+CSG pieceTwo = new Cube(yWidth, 
+                       	 	thickness.getMM(), 
+                       	 	xWidth
                      	 	).toCSG()
 
+pieceTwo = pieceTwo.difference(pieceOne.movex(-3.6*xWidth/4))
 pieceOne = pieceOne.difference(pieceTwo.movex(-3*xWidth/4))
-pieceTwo = pieceTwo.difference(pieceOne.movex(-3*xWidth/4))
-
+pieceThree = pieceThree.difference(pieceOne.movey(-3.6*yWidth/4))
+pieceOne = pieceOne.difference(pieceThree.movey(-3*yWidth/4))
 pieceTwo = pieceTwo.movex(-xWidth)
 				.toZMin()
 				.toXMin()
 pieceOne = pieceOne .movex(xWidth/2)
                     .movey(yWidth/2+20)
                     .toZMin()
+pieceThree = pieceThree .movex(-xWidth)
+				.toZMin()
+				.toXMin()
+				.movey(15)
 				
-def listOfParts = [pieceOne, pieceTwo]
+def listOfParts = [pieceOne, pieceTwo, pieceThree]
 for(int i = 0; i <listOfParts.size();i++){
 	int local = i;
 	listOfParts.get(local)
@@ -51,3 +53,13 @@ return listOfParts
 }
 
 return makeFighter()
+
+/*
+ * pieceOne = pieceOne .movex(xWidth/2)
+                    .movey(yWidth/2+20)
+                    .toZMin()
+pieceThree = pieceThree .movex(-xWidth)
+				.toZMin()
+				.toXMin()
+				.movey(15)
+ */
