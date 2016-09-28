@@ -97,7 +97,29 @@ CSG eyes = eye1.union(eye2)
 			.union(bottomEye); 
 
 //this combines all parts of regice excluding eyes (as they will be different color) into one variable 
-CSG body = torso.union(legs);
+
+
+//shoulder for one of the arms
+CSG shoulder1 = new Cylinder(	12, // Radius at the bottom
+                       		0, // Radius at the top
+                       		30, // Height
+                       		(int)4 //resolution
+                       		).toCSG()//convert to CSG to display                    			 
+shoulder1 = shoulder1 .rotz(50).roty(45).rotx(40).movey(31).movez(60).movex(19)
+
+//shoulder for the other arm
+CSG shoulder2 = new Cylinder(	12, // Radius at the bottom
+                       		0, // Radius at the top
+                       		30, // Height
+                       		(int)4 //resolution
+                       		).toCSG()//convert to CSG to display                    			 
+shoulder2 = shoulder2 .rotz(-50).rotx(-40).roty(-45).movey(19).movez(60).movex(31)
+
+//this combines all parts of regice excluding eyes (as they will be different color) into one variable 
+CSG body = torso.union(legs).union(shoulder1).union(shoulder2);
+
+
+CSG bottomCube= new Cube(69,43.2,35).toCSG().movex(34.5+9).movez(17.5).movey(21.6+5.4);
 
 //rotates these and likes them up with the axises
 body=body.rotz(-45)
@@ -124,28 +146,25 @@ cover = cover.movez(50)
 		   .movex(38.5);
 cover = cover.difference(bodyPlusEyes);
 
+
 body = body.movex(83);
 
 //cube to be subtracted from bottom of cover to allow regice entry
-CSG bottomCube= new Cube(43.2,
-					43.2,
-					35)
-					.toCSG()
-					.movex(21.6+16.4)
-					.movez(17.5)
-					.movey(21.6+5.4);
-cover = cover.difference(bottomCube);
+
+
 //rotates the cover upside down so that it can be printed without overhang
 cover = cover.rotx(180)
 		   .movez(100)
 		   .movey(54);
+
 
 eyes=eyes.movex(83);
 body = body.union(eyes);
 body.setColor(javafx.scene.paint.Color.CYAN);
 eyes=eyes.setColor(javafx.scene.paint.Color.YELLOW);
 
-return[cover,body]
+body=body.scale(0.6)
+return[body]
 
 
 /**
@@ -194,6 +213,24 @@ CSG e4 = new Cube(	77,// X dimention
 CSG letters = i1.union(i2).union(i3).union(c1).union(c2).union(c3).union(e1).union(e2).union(e3).union(e4);
 
 Other experiment, Shoulders:
+
+
+
+
+CSG bottomCube= new Cube(43.2,
+					43.2,
+					35)
+					.toCSG()
+					.movex(21.6+16.4)
+					.movez(17.5)
+					.movey(21.6+5.4);
+cover = cover.difference(bottomCube);
+
+
+
+
+
+
 
 //shoulder for one of the arms
 CSG shoulder1 = new Cylinder(	12, // Radius at the bottom

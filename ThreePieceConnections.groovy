@@ -29,7 +29,7 @@ CSG leg = new Cylinder(4,
                      	).toCSG()
                      	 .movex(5)
                      	 .movey(5)
-pieceOne = pieceOne.difference(leg.movez(-xWidth))
+pieceOne = pieceOne.difference(leg.movez(-xWidth+2))
 pieceTwo = pieceTwo.difference(pieceOne.movex(-3.6*xWidth/4))
 pieceOne = pieceOne.difference(pieceTwo.movex(-3*xWidth/4))
 pieceThree = pieceThree.difference(pieceOne.movey(-3.6*yWidth/4))
