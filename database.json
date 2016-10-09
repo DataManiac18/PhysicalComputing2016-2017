@@ -8,6 +8,10 @@
     "jogKinx": "x"
   },
   "studio-open-git": {
+    "https://github.com/DataManiac18/BowlerStudioConfiguration.git:Covered Figurine.groovy": [
+      "https://github.com/DataManiac18/BowlerStudioConfiguration.git",
+      "Covered Figurine.groovy"
+    ],
     "https://github.com/DataManiac18/VexVitaminScripts.git:scripts/Wheels.groovy": [
       "https://github.com/DataManiac18/VexVitaminScripts.git",
       "scripts/Wheels.groovy"
