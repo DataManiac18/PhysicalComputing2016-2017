@@ -21,7 +21,7 @@ CSG torso = new Cylinder(	30, // Radius at the bottom
                        		5, // Radius at the top
                        		35, // Height
                       		(int)30 //resolution
-                      		).toCSG()//convert to CSG to display                    			        y 
+                      		).toCSG()//convert to CSG to display
                        		.movey(16)
                        		.movex(34)
  //foot 1 

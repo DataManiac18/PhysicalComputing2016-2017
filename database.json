@@ -8,17 +8,9 @@
     "jogKinx": "x"
   },
   "studio-open-git": {
-    "https://gist.github.com/ce0a55eff54594215a74650432a77f23.git:ArduinoDyIO.groovy": [
-      "https://gist.github.com/ce0a55eff54594215a74650432a77f23.git",
-      "ArduinoDyIO.groovy"
-    ],
-    "https://gist.github.com/4c975e42bdaff49d6e6a33aede8c760b.git:JavaNamespaceImp.groovy": [
-      "https://gist.github.com/4c975e42bdaff49d6e6a33aede8c760b.git",
-      "JavaNamespaceImp.groovy"
-    ],
-    "https://gist.github.com/46ed836f0bcb8ae60a94e7f80be80624.git:BasicBowlerDevice.groovy": [
-      "https://gist.github.com/46ed836f0bcb8ae60a94e7f80be80624.git",
-      "BasicBowlerDevice.groovy"
+    "https://github.com/DataManiac18/BowlerStudioConfiguration.git:Covered Figurine.groovy": [
+      "https://github.com/DataManiac18/BowlerStudioConfiguration.git",
+      "Covered Figurine.groovy"
     ]
   },
   "BowlerStudioConfigs": {
