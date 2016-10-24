@@ -164,7 +164,7 @@ body.setColor(javafx.scene.paint.Color.CYAN);
 eyes=eyes.setColor(javafx.scene.paint.Color.YELLOW);
 
 body=body.scale(0.6)
-return[body]
+return body
 
 
 /**
