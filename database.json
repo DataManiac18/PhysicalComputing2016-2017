@@ -8,9 +8,13 @@
     "jogKinx": "x"
   },
   "studio-open-git": {
-    "https://gist.github.com/DataManiac18/823851453cc60fbf66c9896fd54a2868:Walking.groovy": [
-      "https://gist.github.com/DataManiac18/823851453cc60fbf66c9896fd54a2868",
-      "Walking.groovy"
+    "https://github.com/DataManiac18/BowlerStudioConfiguration.git:Covered Figurine.groovy": [
+      "https://github.com/DataManiac18/BowlerStudioConfiguration.git",
+      "Covered Figurine.groovy"
+    ],
+    "https://github.com/DataManiac18/laser-cut-robot.git:LaserCutDog.xml": [
+      "https://github.com/DataManiac18/laser-cut-robot.git",
+      "LaserCutDog.xml"
     ],
     "https://github.com/DataManiac18/laser-cut-robot.git:laserCutCad.groovy": [
       "https://github.com/DataManiac18/laser-cut-robot.git",
