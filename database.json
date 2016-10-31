@@ -12,6 +12,10 @@
       "https://github.com/DataManiac18/laser-cut-robot.git",
       "LaserCutDog.xml"
     ],
+    "https://gist.github.com/6a7ebd3799e086e9b1912c5e7d73125f.git:DogLegShoulder.groovy": [
+      "https://gist.github.com/6a7ebd3799e086e9b1912c5e7d73125f.git",
+      "DogLegShoulder.groovy"
+    ],
     "https://github.com/DataManiac18/laser-cut-robot.git:laserCutCad.groovy": [
       "https://github.com/DataManiac18/laser-cut-robot.git",
       "laserCutCad.groovy"
