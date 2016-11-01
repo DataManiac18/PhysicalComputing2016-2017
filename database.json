@@ -8,6 +8,14 @@
     "jogKinx": "x"
   },
   "studio-open-git": {
+    "https://github.com/DataManiac18/laser-cut-robot.git:feetCad.groovy": [
+      "https://github.com/DataManiac18/laser-cut-robot.git",
+      "feetCad.groovy"
+    ],
+    "https://gist.github.com/09411e3ab3b9d1b2dc657a8c29d9071f.git:cube.groovy": [
+      "https://gist.github.com/09411e3ab3b9d1b2dc657a8c29d9071f.git",
+      "cube.groovy"
+    ],
     "https://github.com/DataManiac18/laser-cut-robot.git:LaserCutDog.xml": [
       "https://github.com/DataManiac18/laser-cut-robot.git",
       "LaserCutDog.xml"
