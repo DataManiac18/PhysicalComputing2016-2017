@@ -12,19 +12,15 @@
       "https://github.com/DataManiac18/laser-cut-robot.git",
       "feetCad.groovy"
     ],
-    "https://github.com/DataManiac18/laser-cut-robot.git:LaserCutDog.xml": [
-      "https://github.com/DataManiac18/laser-cut-robot.git",
-      "LaserCutDog.xml"
-    ],
-    "https://github.com/DataManiac18/laser-cut-robot.git:laserCutCad.groovy": [
-      "https://github.com/DataManiac18/laser-cut-robot.git",
-      "laserCutCad.groovy"
+    "https://gist.github.com/6a7ebd3799e086e9b1912c5e7d73125f.git:DogLegShoulder.groovy": [
+      "https://gist.github.com/6a7ebd3799e086e9b1912c5e7d73125f.git",
+      "DogLegShoulder.groovy"
     ]
   },
   "BowlerStudioConfigs": {
     "firstVersion": "0.19.2",
     "skinBranch": "master",
     "skinRepo": "https://github.com/madhephaestus/BowlerStudioImageAssets.git",
-    "currentVersion": "0.19.4"
+    "currentVersion": "0.19.6"
   }
 }
