@@ -12,10 +12,6 @@
       "https://github.com/DataManiac18/laser-cut-robot.git",
       "feetCad.groovy"
     ],
-    "https://gist.github.com/1358addaf03584df74fbd6259b55bc65.git:helloWorld.groovy": [
-      "https://gist.github.com/1358addaf03584df74fbd6259b55bc65.git",
-      "helloWorld.groovy"
-    ],
     "https://github.com/DataManiac18/laser-cut-robot.git:LaserCutDog.xml": [
       "https://github.com/DataManiac18/laser-cut-robot.git",
       "LaserCutDog.xml"
